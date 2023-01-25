@@ -1,0 +1,63 @@
+
+*{box-sizing: border-box;
+
+}
+
+
+body {
+    background-color: rgb(150, 230, 226);
+    color:white;
+    margin: auto;
+  
+  }
+  h1{
+    margin: auto;
+    text-align: center;
+    color:rgb(221, 32, 32);
+
+  }
+  button, .leftflegs{
+    margin: auto;
+    text-align: center;
+    display:block;
+    cursor: pointer;
+  
+  }
+  .btnrestart .timer{
+    margin: auto;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+
+  }
+
+  .timer{
+    text-align: center;
+    display: block;
+  }
+
+  table {
+    text-align: center;
+    margin: auto;
+
+
+
+}
+.cell {
+    background-color: grey;
+    width: 35px;
+    height: 50px;
+    border-radius: 7px;
+    /* border: 1px solid gray; */
+}
+.cell:hover {
+
+    background-color: rgb(150, 230, 223);
+}
+
+ .leftflegs{
+    margin: auto;
+    text-align: center;
+    display:block;
+  
+  }
