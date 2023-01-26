@@ -2,7 +2,7 @@
 
 <head>
 
-    <title>Minesweeper</title>
+    <title>MINESWEEPER</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +11,30 @@
 </head>
 
 <body onload="onInit()">
-    
-    <h1>Minesweeper</h1>
 
+    <h1>MINESWEEPER</h1>
+    <center>
     <button class="btn-restart" onclick="onInit()">😎</button>
-    <div class="button"><button onclick="Levelgame(16, 2)">Beginner </button>
-        <button onclick="Levelgame(64, 14)">Medium</button>
-        <button onclick="Levelgame(144, 32)">Expert</button>
+    <div class="button"><button onclick="Levelgame(16, 2)">Junior </button>
+        <button onclick="Levelgame(64, 14)">Senior</button>
+        <button onclick="Levelgame(144, 32)">God</button>
     </div>
-
-    <div class="timer">0</div>
-    <div class="leftflegs">'🚩'</div>
-
+  
+    <div class="timer">00.000<span>SEC</span></div>
+    <div class="leftflegs"></div>
+    <h2></h2>
+</center>
     <table border="1">
         <tbody class="gboard"></tbody>
-      </table>
-      
+    </table>
+
     <script src="js/utilis.js"></script>
     <script src="js/main.js"></script>
+
+
+    <footer>
+        <p>Copyright © 2023 Tal Katar</p>
+      </footer>
 
 </body>
 
