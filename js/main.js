@@ -297,7 +297,7 @@ function clearingIntervals() {
 
 
 function initQuerSel() {
-    document.querySelector('.timer').innerText = '00.000'
+    document.querySelector('.timer').innerText = '0'
     document.querySelector('h2').innerText = ''
     document.querySelector('.btn-restart').innerText = '😎'
     document.querySelector('.leftflegs').innerText = ''
