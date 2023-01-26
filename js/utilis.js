@@ -1,17 +1,13 @@
 'use strict'
 
-
-
-
+var gSec=0
+var gMillisec = 0
 
 function getRandomInt(min, max) {
     min = Math.ceil(min)
     max = Math.floor(max)
     return Math.floor(Math.random() * (max - min)) + min //The maximum is inclusive and the minimum is inclusive
 }
-
-
-
 
 function renderBoard() {
 
@@ -24,8 +20,7 @@ function renderBoard() {
             const cell = gBoard[i][j]
             const className = `cell cell-${i}-${j}`
 
-            strHTML += `<td class="${className}"  onclick="onCellClicked(this,${i},${j})" 
-            onclick="onCellMarked(elCell)"></td>`
+            strHTML += `<td class="${className}"  onclick="onCellClicked(this,${i},${j})" oncontextmenu="onCellMarked(this,${i},${j})"></td>`
         }
         strHTML += '</tr>'
     }
@@ -35,20 +30,31 @@ function renderBoard() {
     elContainer.innerHTML = strHTML
 }
 
+function renderCell(i,j,value){
+    var elCell = document.querySelector(`.cell-${i}-${j}`)
+        elCell.innerHTML= value
 
+}
 
+function timer() {
+    gMillisec=0
+    gSec=0
+    gTimerInterval = setInterval(() => {
+    gMillisec += 10
+    var elTimer = document.querySelector('.timer')
+    elTimer.innerText = `${gSec}.${gMillisec}`
+    if (gMillisec > 999) {
+        gMillisec = 0
+        gSec++
+    }
+},1)
 
-// function emogirestart(){
+}
 
-//     if(gGame.isOn===false){
-//     var elrestart = document.querySelector('.btn-restart')
-//     elrestart.innerText ='😞'}
+document.addEventListener("contextmenu", function(){
+})
+window.addEventListener("contextmenu", e => e.preventDefault());
 
-//     else{
-//         elrestart.innerText ='😎'
-//     }
-
-// }
 
 
 
@@ -62,18 +68,24 @@ function renderBoard() {
 //     }, 37)
 // }
 
-// function checkGameOver() {
-//     // if (gGame.isOn=false)
-// clearInterval(gGameoverInterval)
 
+// function timer() {
 
+// gSec+=1
+//     var elTimer = document.querySelector('.timer')
+//     elTimer.innerText =`${gSec}`
 
-    
 // }
 
-window.addEventListener("contextmenu", e => e.preventDefault());
 
 
-
-
+// function timer(){
+//     gSec=0
+//  gSec += 1
+//  gTimerInterval = setInterval( () => {
+//     gSec += 1
+//     document.querySelector('.timer').innerText = (
+//         gSec)
+// }, 997)
+// }
 
