@@ -1,7 +1,6 @@
 'use strict'
 
-var gSec=0
-// var gMillisec = 0
+var gSec = 0
 
 function getRandomInt(min, max) {
     min = Math.ceil(min)
@@ -25,29 +24,29 @@ function renderBoard() {
         strHTML += '</tr>'
     }
     strHTML += '</tbody></table>'
-    
+
     const elContainer = document.querySelector('.gboard')
     elContainer.innerHTML = strHTML
 }
 
-function renderCell(i,j,value){
+function renderCell(i, j, value) {
     var elCell = document.querySelector(`.cell-${i}-${j}`)
-        elCell.innerHTML= value
+    elCell.innerHTML = value
 
 }
 
 
-function timer(){
-    gSec=0
- gTimerInterval = setInterval( () => {
-    gSec += 1
-    document.querySelector('.timer').innerText = (
-        gSec)
-}, 1000)
+function timer() {
+    gSec = 0
+    gTimerInterval = setInterval(() => {
+        gSec += 1
+        document.querySelector('.timer span').innerText = (
+            gSec)
+    }, 1000)
 }
 
 
-document.addEventListener("contextmenu", function(){
+document.addEventListener("contextmenu", function () {
 })
 window.addEventListener("contextmenu", e => e.preventDefault());
 

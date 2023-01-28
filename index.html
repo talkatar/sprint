@@ -14,28 +14,36 @@
 
     <h1>MINESWEEPER</h1>
     <center>
-    <button class="btn-restart" onclick="onInit()">😎</button>
-    <div class="button"><button onclick="Levelgame(16, 2)">Junior </button>
-        <button onclick="Levelgame(64, 14)">Senior</button>
-        <button onclick="Levelgame(144, 32)">God</button>
-    </div>
-  
-    <div class="timer">0</div>
-    <div></div>
-    <div class="leftflegs"></div>
-    <h2></h2>
-</center>
-    <table border="1">
-        <tbody class="gboard"></tbody>
-    </table>
+        <button class="btn-restart" onclick="onInit()">😎</button>
+        <div class="button"><button onclick="Levelgame(16, 2)">Junior </button>
+            <button onclick="Levelgame(64, 14)">Senior</button>
+            <button onclick="Levelgame(144, 32)">God</button>
+        </div>
+        <div class="timer"><span> </span> sec</div>
+        <div class="leftflegs"></div>
+        <h2></h2>
+        <h3></h3>
+
+
+        <table border="1">
+            <tbody class="gboard"></tbody>
+        </table>
+        <button class="hint" onclick="hintInitialize()">🔔🔔🔔</button>
+        <div class="bestime">Best Time is: <span></span> sec</div>
+        <button class="safeclick" onclick="safeClickInit()">Safe Click: <span></span> times more</button>
+        <button class="darkmode" onclick="darkMode()">Dark Mode</button>
+        <button class="manuallyMines" onclick="manuallyMines()">Manually Mines</button>
+
+        <footer>
+            <p>Copyright © 2023 Tal Katar</p>
+        </footer>
+
+    </center>
 
     <script src="js/utilis.js"></script>
     <script src="js/main.js"></script>
 
 
-    <footer>
-        <p>Copyright © 2023 Tal Katar</p>
-      </footer>
 
 </body>
 
